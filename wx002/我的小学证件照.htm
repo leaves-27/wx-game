@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)http://h5.qzone.qq.com/q/tu/websites/pupils/index.html?level=11&pf_flag=wechat&_proxy=1 -->
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="cache-control" content="no-cache">
+
+  <title>我的小学证件照</title>
+  <meta name="description" itemprop="description" content="好神奇！我用黑科技找回了失散多年的小学证件照……">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="./我的小学证件照_files/global.css">
+  <link rel="stylesheet" type="text/css" href="./我的小学证件照_files/main.css">
+  <script src="./我的小学证件照_files/cdn_dianjiliu.js"></script>
+</head>
+<body style="font-size: 9.504px;">
+  <img id="shareImg" class="invisible" src="./我的小学证件照_files/icon-app.png" shareurl="http://h5.qzone.qq.com/q/tu/websites/pupils/index.html?level=111&amp;pf_flag=other&amp;_proxy=1">
+  <input id="uploadInput" class="invisible" type="file" accept="image/png, image/jpeg">
+  <div id="wrapperOuter" class="wrapper-outer">
+    <div id="indexSection" class="wrapper-inner index-section" style="width: 15%; left: 42.5%;">
+      <img class="index-bg" src="./我的小学证件照_files/index_bg6.jpg">
+      <img class="upload-tip" src="./我的小学证件照_files/upload-tip.png">
+      <img class="choose-btn" src="./我的小学证件照_files/upload.png">
+      <div class="holder"></div>
+    </div>
+    <div id="cropSection" class="wrapper-inner crop-section" style="display: none; visibility: visible; width: 15%; left: 42.5%;">
+      <div id="cropLayer" class="crop-layer" style="height: 86.69%;">
+        <canvas id="cropCanvas" width="330" height="440"></canvas>
+        <img id="cropImg" style="display:none;">
+        <div class="background">&nbsp;</div>
+      </div>
+      <div id="cropMaskUp" class="crop-mask" style="visibility:hidden;">&nbsp;</div>
+      <div id="cropMaskDown" class="crop-mask" style="visibility:hidden;">&nbsp;</div>
+      <div id="cropBar" class="crop-bar">
+        <div class="cancel-btn">取消</div>
+        <div class="confirm-btn">使用</div>
+      </div>
+    </div>
+    <div id="middleSection" class="wrapper-inner middle-section" style="display: none; width: 15%; left: 42.5%;">
+      <img class="middle-bg" src="./我的小学证件照_files/result_bg5.jpg">
+      <img class="photo-frame" src="./我的小学证件照_files/frame.png">
+      <img class="user-photo" src="http://h5.qzone.qq.com/q/tu/websites/pupils/index.html?level=11&amp;pf_flag=wechat&amp;_proxy=1">
+      <img class="sex-tip" src="./我的小学证件照_files/sex.png">
+      <img class="sex-male" src="./我的小学证件照_files/male.png">
+      <img class="sex-female" src="./我的小学证件照_files/female.png">
+      <div class="holder"></div>
+    </div>
+    <div id="resultSection" class="wrapper-inner result-section" style="display: none; width: 15%; left: 42.5%;">
+      <img class="result-bg" src="./我的小学证件照_files/result_bg5.jpg">
+      <img class="photo-frame" src="./我的小学证件照_files/frame1.png">
+      <img class="switch-btn" src="./我的小学证件照_files/switch_2.png">
+      <img class="photo-frame2" src="./我的小学证件照_files/frame2.png">
+      <img class="photo-result">
+      <img class="retry-tip" src="./我的小学证件照_files/pao.png">
+      <img class="share-btn" src="./我的小学证件照_files/share.png">
+      <img class="retry-btn" src="./我的小学证件照_files/retry.png">
+      <img class="metry-btn" src="./我的小学证件照_files/metry.png" style="display:none;">
+      <img class="download-banner" src="./我的小学证件照_files/download.png">
+      <img class="download-ear-img" style="" src="./我的小学证件照_files/ear_0.gif">
+      <div class="download-area"></div>
+      <div class="holder"></div>
+    </div>
+    <div id="loadingSection" class="wrapper-inner loading-section" style="display: none; width: 15%; left: 42.5%;">
+      <div class="body">
+        <img class="animate" src="./我的小学证件照_files/icon-loading.png">
+        <p></p>
+        <div style="display:none;">关闭</div>
+      </div>
+    </div>
+    <div id="shareSection" class="wrapper-inner share-section" style="display: none; width: 15%; left: 42.5%;">
+      <div class="background">&nbsp;</div>
+      <img src="./我的小学证件照_files/share-guide.png"></div>
+    <div id="qrcodeSection" class="wrapper-inner qrcode-section" style="display: none; width: 15%; left: 42.5%;">
+      <div class="background">&nbsp;</div>
+      <div class="body">
+        <img id="qrcodeImg">
+        <p>请使用手机扫码体验</p>
+      </div>
+    </div>
+  </div>
+  <div class="place-holder"></div>
+  
+  <script type="text/javascript">
+    (function(filepaths, onloadCallback) {
+        var scriptLoadStat = {};
+        for (var i in filepaths) {
+            scriptLoadStat[filepaths[i]] = false;
+        }
+        function scriptAllLoaded() {
+          for (var filepath in scriptLoadStat) {
+              var stat = scriptLoadStat[filepath];
+              if (!stat) {
+                  return false;
+              }
+          }
+          return true;
+        }
+        var allScriptReady = false;
+        for (var i in filepaths) {
+          var scriptDom = document.createElement("script");
+          scriptDom.type = "text/javascript";
+          scriptDom.onload = scriptDom.onreadystatechange = function(){
+              scriptLoadStat[this.getAttribute("path")] = true;
+              if (scriptAllLoaded() && !allScriptReady) {
+                  allScriptReady = true;
+                  onloadCallback();
+              }
+          };
+          scriptDom.setAttribute("path", filepaths[i]);
+          scriptDom.src = filepaths[i];
+          document.body.appendChild(scriptDom);
+      }
+    })(["http://res.tu.qq.com/assets/tu/zepto.min.js",
+        "http://res.tu.qq.com/assets/tu/ext-1.0.1.min.js",
+        "res/global.js?v=3",
+        "res/main.js?v=20"], function(){
+        pageReady(indexPageReady, indexPageResize);
+    });
+  </script>
+</body>
+</html>
