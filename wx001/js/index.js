@@ -55,9 +55,9 @@ $(function(){
 		$("div#overlayer").hide();
 	});
 
-	if(window!=parent){
-		$(window.parent.document).find("#iframe1").prop('src', 'http://sy.pinzs.com/v-U70374L4S8');
-	}else{
-		$('#iframe1').prop('src', 'http://sy.pinzs.com/v-U70374L4S8');
-	}
+	// if(window!=parent){
+	// 	$(window.parent.document).find("#iframe1").prop('src', 'http://sy.pinzs.com/v-U70374L4S8');
+	// }else{
+	// 	$('#iframe1').prop('src', 'http://sy.pinzs.com/v-U70374L4S8');
+	// }
 });
